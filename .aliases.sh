@@ -56,6 +56,7 @@ alias h='tldr'
 #django
 alias osd="cd $HOME/omega/omega-service-desk && source $HOME/omega/env/bin/activate"
 alias ors="python manage.py runserver" 
+alias mgrt="python manage.py migrate" 
 alias doff="deactivate"
 
 #4geek
