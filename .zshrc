@@ -1,4 +1,4 @@
-source /home/omegasoftve/antigen.zsh
+source ~/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle jump
