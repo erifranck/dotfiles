@@ -1,6 +1,11 @@
 # Constants
   set $mod Mod4
 
+  set $bg-color            #2f343f
+  set $inactive-bg-color   #2f343f
+  set $text-color          #f3f4f5
+  set $inactive-text-color #676E7D
+  set $urgent-bg-color     #E53935
   set $base00 #101218
   set $base01 #1f222d
   set $base02 #252936
@@ -37,9 +42,6 @@
   floating_modifier $mod
   hide_edge_borders both
   new_window none
-  smart_borders on
-  gaps inner 0
-  gaps outer 0
 
 # Window-Related Bindings
   bindsym $mod+Shift+q kill
@@ -54,6 +56,7 @@
   bindsym $mod+Shift+space floating toggle
   bindsym $mod+f fullscreen toggl
   bindsym $mod+v layout toggle split
+  bindsym $mod+w layout tabbed
   #bindsym $mod+h split h
   bindsym $mod+space focus mode_toggle
   bindsym $mod+r mode "  "
@@ -72,7 +75,8 @@
 # Program-Related Bindings
   bindsym $mod+Shift+f exec firefox
   bindsym $mod+Return exec i3-sensible-terminal
-  bindsym $mod+d exec rofi -show run
+  bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+
   # bindsym --release Print exec imgur-screenshot
   bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -140,9 +144,6 @@
     status_command i3blocks
     position bottom
     # strip_workspace_numbers yes
-    height 25
-    bindsym button4 nop
-    bindsym button5 nop
     colors {
       separator $base03
       background $base01
@@ -154,3 +155,6 @@
       urgent_workspace   $base01 $base01    $base08
     }
   }
+
+exec feh --bg-scale /home/omegasoftve/Downloads/nodejs-wallpaper-nsfw.jpg
+exec compton -f

@@ -36,7 +36,7 @@ if neobundle#is_installed('vim-gitgutter')
 endif
 
 if neobundle#is_installed('delimitMate')
-  let delimitMate_expand_cr = 1
+ "let delimitMate_expand_cr = 1
 endif
 
 if neobundle#is_installed('vim-markdown')
@@ -48,34 +48,6 @@ if neobundle#is_installed('ultisnips')
   let g:UltiSnipsJumpForwardTrigger="<c-k>"
   let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
   let g:UltiSnipsSnippetDirectories=['snips']
-endif
-
-
-if neobundle#is_installed('vim-airline')
-  set laststatus=2
-  set noshowmode
-  let g:airline#extensions#tabline#fnamemod = ':t'
-  let g:airline_powerline_fonts = 1
-  let g:airline_left_sep=''
-  let g:airline_right_sep=''
-  let g:airline#extensions#tabline#left_sep = ''
-  let g:airline#extensions#tabline#left_alt_sep = ''
-  let g:airline_section_z = '%3p%%'
-  let g:airline_section_y = ''
-  let g:airline_section_b = ''
-  let g:airline_mode_map = {
-        \ '__' : '-',
-        \ 'n'  : 'N',
-        \ 'i'  : 'I',
-        \ 'R'  : 'R',
-        \ 'c'  : 'C',
-        \ 'v'  : 'V',
-        \ 'V'  : 'V',
-        \ '' : 'V',
-        \ 's'  : 'S',
-        \ 'S'  : 'S',
-        \ '' : 'S',
-        \ }
 endif
 
 if neobundle#is_installed('neomake')

@@ -1,17 +1,76 @@
 " General
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-commentary'
+
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-repeat'
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'taglist.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tsaleh/vim-align'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'austintaylor/vim-indentobject'
+NeoBundle 'greplace.vim'
+NeoBundle 'sjl/splice.vim'
+NeoBundle 'Indent-Guides'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-vividchalk'
+NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+NeoBundle 'Puppet-Syntax-Highlighting'
+NeoBundle 'JSON.vim'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'vitaly/vim-syntastic-coffee'
+NeoBundle 'vim-scripts/jade.vim'
+NeoBundle 'wavded/vim-stylus'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'mtscout6/vim-cjsx'
+NeoBundle 'vitaly/vim-literate-coffeescript'
+NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'vitaly/vim-gitignore'
+NeoBundle 'scrooloose/vim-space'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'iurifq/ctrlp-rails.vim', {'depends' : 'kien/ctrlp.vim' }
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'morhetz/gruvbox'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundleLazy 'benekastah/neomake', {'on_cmd': 'Neomake'}
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundleLazy 'Raimondi/delimitMate', {'on_i': 1}
 NeoBundleLazy 'Shougo/deoplete.nvim', { 'on_i': 1 }
-
 " Unite
 NeoBundle     'Shougo/vimproc.vim', { 'build' : 'make' }
 NeoBundleLazy 'Shougo/unite.vim', { 'on_cmd': 'Unite' }

@@ -6,7 +6,7 @@ function! s:install_neobundle()
     echo 'NeoBundle has been downloaded...'
   endif
   if has('vim_starting')
-    set runtimepath+=/home/booker/.config/nvim/bundle/neobundle.vim/
+    set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
   endif
   call neobundle#begin()
   NeoBundleFetch 'Shougo/neobundle.vim'
@@ -16,12 +16,14 @@ function! s:install_neobundle()
 endfunction
 call s:install_neobundle()
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-filetype plugin indent on
 let base16colorspace=256
 syntax enable
-colorscheme base16-gooey
+colorscheme gruvbox
 
+nmap <F2> :tabprevious<cr>
+nmap <F3> :tabNext<cr>
+nmap <F4> :NERDTreeToggle<cr>
+nmap <F5> :NERDTreeFind<cr>
 set background=dark
 set number
 set clipboard=unnamed
@@ -31,11 +33,8 @@ set smartcase
 set expandtab
 set shiftwidth=2
 set noswapfile
-set cc=79
 set undofile
-set undodir=~/.config/nvim/temp/undodir
 set completeopt-=preview
-
 source ~/.config/nvim/config/plugin/all.vim
 source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/autocmds.vim

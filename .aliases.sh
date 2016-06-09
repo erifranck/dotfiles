@@ -1,13 +1,15 @@
 # Git
 alias gi="git init"
-alias gs="git status"
+alias gst="git status"
 alias gd="git diff"
 alias gdh="git diff HEAD"
 alias gc="git clone $1 $2"
 alias gcm="git commit -m "$1""
 alias gaa="git add -A ."
 alias gpo="git push origin $1"
-alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gpo="git push"
+alias gl="git pull"
+alias glg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glo="git log --oneline"
 alias grhh="git reset --hard HEAD"
 alias gcp="git cherry-pick $1"
@@ -51,3 +53,11 @@ alias update.="gaa && gcm 'Update dotfiles' && gpo master"
 # Man
 alias h='tldr'
 
+#django
+alias osd="cd $HOME/omega/omega-service-desk && source $HOME/omega/env/bin/activate"
+alias ors="python manage.py runserver" 
+alias doff="deactivate"
+
+#4geek
+alias mgp="cd $HOME/4geeks/mall4g-public && npm start"
+alias mgc="cd $HOME/4geeks/mall4g-webclient && npm start"

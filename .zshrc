@@ -1,4 +1,4 @@
-source /usr/share/zsh/scripts/antigen/antigen.zsh
+source /home/omegasoftve/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle jump
@@ -12,7 +12,7 @@ source ~/.aliases.sh
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-gooey.dark.sh"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-export NVM_DIR="/home/booker/.nvm"
+export NVM_DIR="/home/omegasoftve/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export EDITOR=nvim
