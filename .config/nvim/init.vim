@@ -21,9 +21,11 @@ syntax enable
 colorscheme gruvbox
 
 nmap <F2> :tabprevious<cr>
-nmap <F3> :tabNext<cr>
+nmap <F3> :tabnext<cr>
 nmap <F4> :NERDTreeToggle<cr>
 nmap <F5> :NERDTreeFind<cr>
+map <F12> :!mkdir
+map <C-s> :w <cr>
 set background=dark
 set number
 set clipboard=unnamed
