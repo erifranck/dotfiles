@@ -32,7 +32,11 @@ NeoBundle 'vim-scripts/jade.vim'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat' 
 NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'ryanoasis/vim-devicons'
+NeoBundle 'pocke/lemonade'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'mustache/vim-mustache-handlebars'
@@ -40,16 +44,23 @@ NeoBundle 'mtscout6/vim-cjsx'
 NeoBundle 'vitaly/vim-literate-coffeescript'
 NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vitaly/vim-gitignore'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/vim-space'
 NeoBundle 'mattn/gist-vim'
+NeoBundle 'valloric/youcompleteme'
 NeoBundle 'matze/vim-move'
+NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -71,6 +82,9 @@ NeoBundleLazy 'benekastah/neomake', {'on_cmd': 'Neomake'}
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundleLazy 'Raimondi/delimitMate', {'on_i': 1}
 NeoBundleLazy 'Shougo/deoplete.nvim', { 'on_i': 1 }
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'chrisbra/vim-diff-enhanced'
+NeoBundle 'mhinz/vim-signify'
 " Unite
 NeoBundle     'Shougo/vimproc.vim', { 'build' : 'make' }
 NeoBundleLazy 'Shougo/unite.vim', { 'on_cmd': 'Unite' }
