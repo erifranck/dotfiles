@@ -26,17 +26,50 @@ nmap <F4> :NERDTreeToggle<cr>
 nmap <F5> :NERDTreeFind<cr>
 map <F12> :!mkdir
 map <C-s> :w <cr>
+set clipboard+=unnamedplus
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap <leader>p "+p
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
 set background=dark
 set number
-set clipboard=unnamed
 set relativenumber
 set tabstop=2
-set smartcase
+"" set smartcase
+set ignorecase
 set expandtab
 set shiftwidth=2
 set noswapfile
 set undofile
 set completeopt-=preview
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set wrap!
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
+"beauty
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 source ~/.config/nvim/config/plugin/all.vim
 source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/autocmds.vim
