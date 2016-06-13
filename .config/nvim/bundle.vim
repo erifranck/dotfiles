@@ -59,7 +59,6 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/vim-space'
 NeoBundle 'mattn/gist-vim'
-NeoBundle 'valloric/youcompleteme'
 NeoBundle 'matze/vim-move'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'mattn/webapi-vim'
@@ -83,6 +82,7 @@ NeoBundleLazy 'benekastah/neomake', {'on_cmd': 'Neomake'}
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundleLazy 'Raimondi/delimitMate', {'on_i': 1}
 NeoBundleLazy 'Shougo/deoplete.nvim', { 'on_i': 1 }
+NeoBundle 'shougo/neoinclude.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'chrisbra/vim-diff-enhanced'
 NeoBundle 'mhinz/vim-signify'
