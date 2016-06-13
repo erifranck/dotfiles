@@ -22,7 +22,9 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-vividchalk'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'Puppet-Syntax-Highlighting'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'JSON.vim'
+NeoBundle 'ternjs/tern_for_vim'
 NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
@@ -43,7 +45,6 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'mtscout6/vim-cjsx'
 NeoBundle 'vitaly/vim-literate-coffeescript'
 NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
-NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -91,6 +92,8 @@ NeoBundleLazy 'Shougo/unite.vim', { 'on_cmd': 'Unite' }
 NeoBundleLazy 'Shougo/vimfiler.vim', { 'depends': 'Shougo/unite.vim', }
 
 " JavaScript
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'nono/jquery.vim'
 NeoBundle 'moll/vim-node'
 NeoBundleLazy 'mxw/vim-jsx', {'on_ft': 'javascript'}
 NeoBundleLazy 'othree/yajs.vim', {'on_ft': 'javascript'}
