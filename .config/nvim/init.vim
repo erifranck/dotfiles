@@ -24,6 +24,8 @@ nmap <F2> :tabprevious<cr>
 nmap <F3> :tabnext<cr>
 nmap <F4> :NERDTreeToggle<cr>
 nmap <F5> :NERDTreeFind<cr>
+nmap <F9> :set ignorecase<cr>
+nmap <F10> :set smartcase<cr>
 map <F12> :!mkdir
 map <C-s> :w <cr>
 set clipboard+=unnamedplus
