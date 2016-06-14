@@ -72,6 +72,17 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" disable arrow keys
+nnoremap <UP>    <NOP>
+nnoremap <DOWN>  <NOP>
+nnoremap <LEFT>  <NOP>
+nnoremap <RIGHT> <NOP>
+inoremap <UP>    <NOP>
+inoremap <DOWN>  <NOP>
+inoremap <LEFT>  <NOP>
+inoremap <RIGHT> <NOP>
+
 source ~/.config/nvim/config/plugin/all.vim
 source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/autocmds.vim
