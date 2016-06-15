@@ -56,4 +56,21 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
+"beauty
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" disable arrow keys
+nnoremap <UP>    <NOP>
+nnoremap <DOWN>  <NOP>
+nnoremap <LEFT>  <NOP>
+nnoremap <RIGHT> <NOP>
+inoremap <UP>    <NOP>
+inoremap <DOWN>  <NOP>
+inoremap <LEFT>  <NOP>
+inoremap <RIGHT> <NOP>
+
 source ~/.config/nvim/config/plugin/all.vim
