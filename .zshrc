@@ -6,7 +6,7 @@ antigen apply
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-
+antigen bundle vi-mode
 source ~/.aliases.sh
 
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-gooey.dark.sh"
@@ -20,3 +20,5 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 antigen theme https://github.com/halfo/lambda-mod-zsh-theme lambda-mod
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

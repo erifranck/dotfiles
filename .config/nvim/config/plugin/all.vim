@@ -1,77 +1,175 @@
-if neobundle#tap('unite.vim')
-  nmap \ [unite]
-  nnoremap <silent> [unite]r :UniteResume -no-start-insert -force-redraw<CR>
-  nnoremap <silent> [unite]g :Unite grep:.<cr>
-  nnoremap <silent> [unite]f :Unite file_rec/async<CR>
-  nnoremap <silent> [unite]e :VimFiler -find<cr>
-  let neobundle#hooks.on_source = '~/.config/nvim/config/plugin/unite.vim'
-  call neobundle#untap()
-endif
+let mapleader = ","
 
-if neobundle#tap('vimfiler.vim')
-  let neobundle#hooks.on_source = '~/.config/nvim/config/plugin/vimfiler.vim'
-  call neobundle#untap()
-endif
+" show trailing whitespaces, tabs and unpritable characters
+set list
+set listchars=tab:▸\ ,trail:◃,nbsp:•
 
-if neobundle#tap('deoplete.nvim') && has('nvim') "{{{
-  let g:deoplete#enable_at_startup = 1
-  let neobundle#hooks.on_source = '~/.config/nvim/config/plugin/deoplete.vim'
-  call neobundle#untap()
-endif
+" indentation
+set number
+set splitbelow
+set splitright
+set hidden
+set ff=unix
+set fileformat=unix
+set lazyredraw
+set noshowmode
+set ignorecase
+set smartcase
+set gdefault
 
-if neobundle#is_installed('vim-table-mode')
-  let g:table_mode_corner="|"
+" encoding
+if has('vim_starting')
+  set encoding=utf-8
 endif
+set fileencoding=utf-8
 
-if neobundle#is_installed('vim-jsx')
-  let g:jsx_ext_required = 0
-endif
+" make a mark for column 80
+""set colorcolumn=80
+""highlight ColorColumn ctermbg=235
 
-if neobundle#is_installed('vim-gitgutter')
-  let g:gitgutter_sign_column_always = 1
-  set updatetime=250
-  let g:gitgutter_sign_added = '▎'
-  let g:gitgutter_sign_modified = '▎'
-  let g:gitgutter_sign_removed= '▎'
-endif
+" mappings
+map <F5> gT
+map <F6> gt
+map <F7> :tabnew<CR>
+map <F8> :tabclose<CR>
+map <Leader>n :NERDTreeToggle<CR>
+map <Leader>fs :call FutureShock()<CR>
+inoremap jj <ESC>
+nnoremap <Leader><Space> :noh<return>
+noremap <Leader>s :update<CR>
+nnoremap \ :Ag<Space>
+noremap <Leader>A :Autoformat<CR>
+nnoremap <Leader>bt :BTags<CR>
+nnoremap <Leader>gf :GitFiles<CR>
+nnoremap <C-P> :Files<CR>
 
-if neobundle#is_installed('delimitMate')
- "let delimitMate_expand_cr = 1
-endif
+" yanking without moving the cursor position
+vnoremap y myy`y
+vnoremap Y myY`y
 
-if neobundle#is_installed('vim-markdown')
-  let g:vim_markdown_folding_disabled = 1
-endif
+" easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-if neobundle#is_installed('ultisnips')
-  let g:UltiSnipsExpandTrigger="<c-k>"
-  let g:UltiSnipsJumpForwardTrigger="<c-k>"
-  let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
-  let g:UltiSnipsSnippetDirectories=['snips']
-endif
+" disable arrow keys
+nnoremap <UP>    <NOP>
+nnoremap <DOWN>  <NOP>
+nnoremap <LEFT>  <NOP>
+nnoremap <RIGHT> <NOP>
+inoremap <UP>    <NOP>
+inoremap <DOWN>  <NOP>
+inoremap <LEFT>  <NOP>
+inoremap <RIGHT> <NOP>
 
-if neobundle#is_installed('neomake')
-  function! ResolveESLint()
-    let l:npm_bin = ''
-    let l:eslint = 'eslint'
-    if executable('npm')
-      let l:npm_bin = split(system('npm bin'), '\n')[0]
-    endif
-    if strlen(l:npm_bin) && executable(l:npm_bin . '/eslint')
-      let l:eslint = l:npm_bin . '/eslint'
-    endif
-    let b:neomake_javascript_eslint_exe = l:eslint
-  endfunction
-  autocmd FileType javascript :call ResolveESLint()
-  autocmd! BufWritePost,BufReadPost * Neomake
-  let g:neomake_javascript_enabled_makers = ['eslint']
-  let g:neomake_warning_sign = {
-        \ 'text': 'W',
-        \ 'texthl': 'WarningMsg',
-        \ }
-  let g:neomake_error_sign = {
-        \ 'text': 'E',
-        \ 'texthl': 'ErrorMsg',
-        \ }
-  let g:neomake_open_list = 2
-endif
+" Neomake
+nmap <Leader><Space>o :lopen<CR>
+nmap <Leader><Space>c :lclose<CR>
+nmap <Leader><Space>, :ll<CR>
+nmap <Leader><Space>n :lnext<CR>
+nmap <Leader><Space>p :lprev<CR>
+
+" CamelCaseMotion
+map <S-W> <Plug>CamelCaseMotion_w
+map <S-B> <Plug>CamelCaseMotion_b
+map <S-E> <Plug>CamelCaseMotion_e
+
+" workaround for ctrl-h not working on nvim
+"if has('nvim')
+  "nmap <BS> <C-W>h
+"endif
+
+" toggle auto-indenting for code paste
+nnoremap <F7> :set invpaste paste?<CR>
+set pastetoggle=<F7>
+
+nmap <F2> :tabprevious<cr>
+nmap <F3> :tabnext<cr>
+nmap <F4> :NERDTreeToggle<cr>
+nmap <F5> :NERDTreeFind<cr>
+nmap <F9> :set ignorecase<cr>
+nmap <F10> :set smartcase<cr>
+map <F12> :!mkdir
+map <C-s> :w <cr>
+
+" fzf config
+let g:fzf_buffers_jump = 1
+let g:fzf_layout = { 'down': '~25%' }
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+
+" vim-easy-tags
+let g:easytags_async = 1
+let g:easytags_suppress_ctags_warning = 1 " temporary fix for broken version detection with universal-ctags
+
+" vim-rest-console
+let g:vrc_trigger = '<C-q>'
+
+" use deoplete
+let g:deoplete#enable_at_startup = 1
+
+" supertab
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" [Ag] Start searching from the root of the project instead of cwd
+let g:ag_working_path_mode="r"
+
+" [quick-scope] Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
+" Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_error_sign = {
+      \ 'text': 'E',
+      \ 'texthl': 'ErrorMsg',
+      \ }
+
+hi WarningMsg ctermbg=black ctermfg=3
+let g:neomake_warning_sign = {
+      \ 'text': 'W',
+      \ 'texthl': 'WarningMsg',
+      \ }
+
+autocmd! BufWritePost,BufEnter * Neomake
+
+" save swap files in a temp directory
+set backupdir=~/.tmp,/tmp,/var/tmp
+set directory=~/.tmp,/tmp,/var/tmp
+silent! set undodir=~/.tmp,/tmp,/var/tmp
+
+" From https://github.com/Dinduks/dotfiles/blob/master/vim/.vimrc
+" Remove trailing whitespaces, replace tabs and non-breaking spaces with spaces
+function! FutureShock()
+  silent! %retab
+  silent! %s/\%u00a0/ /
+  silent! %s/\s\+$//
+endfunction

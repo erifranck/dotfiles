@@ -1,33 +1,23 @@
-function! s:install_neobundle()
-  if (!isdirectory(expand("$HOME/.config/nvim/bundle/neobundle.vim")))
-    echo 'Downloading NeoBundle. Please wait...'
-    call system(expand("mkdir -p $HOME/.config/nvim/bundle"))
-    call system(expand("git clone https://github.com/Shougo/neobundle.vim ~/.config/nvim/bundle/neobundle.vim"))
-    echo 'NeoBundle has been downloaded...'
+function! s:install_plug()
+  if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    echo 'Downloading Plug. Please wait...'
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
+    echo 'success :3'
   endif
-  if has('vim_starting')
-    set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
-  endif
-  call neobundle#begin()
-  NeoBundleFetch 'Shougo/neobundle.vim'
+  set runtimepath+=~/.config/nvim/autoload/plug.vim/
+  call plug#begin()
   source ~/.config/nvim/bundle.vim
-  call neobundle#end()
-  NeoBundleCheck
+  call plug#end()
 endfunction
-call s:install_neobundle()
+call s:install_plug()
 
 let base16colorspace=256
 syntax enable
-colorscheme gruvbox
+" "colorscheme gruvbox
+colorscheme monokain
 
-nmap <F2> :tabprevious<cr>
-nmap <F3> :tabnext<cr>
-nmap <F4> :NERDTreeToggle<cr>
-nmap <F5> :NERDTreeFind<cr>
-nmap <F9> :set ignorecase<cr>
-nmap <F10> :set smartcase<cr>
-map <F12> :!mkdir
-map <C-s> :w <cr>
 set clipboard+=unnamedplus
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
@@ -66,12 +56,4 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
-"beauty
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 source ~/.config/nvim/config/plugin/all.vim
-source ~/.config/nvim/config/bindings.vim
-source ~/.config/nvim/config/autocmds.vim

@@ -3,4 +3,7 @@
 temp
 .tern-port
 bundle
+.config/nvim/autoload/
+.config/nvim/plugged/
+
 .npmrc
