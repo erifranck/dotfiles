@@ -132,6 +132,7 @@
 # Program Workspaces
   assign [class="Firefox"] $workspace1
   assign [class="Spotify"] $workspace10
+  assign [class="Franz"] $workspace9
 
 # Floating
   for_window [class="Lxappearance"] floating enable
@@ -175,7 +176,7 @@ bindsym Print exec screenshot
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 exec_always --no-startup-id xrandr --output HDMI-0 --off --output DVI-I-1 --off --output DVI-I-0 --off --output DVI-I-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-2 --mode 1920x1080 --pos 1920x0 --rotate normal
 exec --no-startup-id spotify
-exec --no-startup-id skype
+exec --no-startup-id Franz 
 exec --no-startup-id subl
 
 # Keys
