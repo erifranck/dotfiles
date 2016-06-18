@@ -42,17 +42,10 @@ set shiftwidth=2
 set noswapfile
 set undofile
 set completeopt-=preview
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set guifont=Droid\ Sans\ Mono\ for\ FontAwesome\ Plus\ Nerd\ File\ Types:h11
 set wrap!
 " Always show statusline
 set laststatus=2
-
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
-
-" Always show statusline
-set laststatus=2
-
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
