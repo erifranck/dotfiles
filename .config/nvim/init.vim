@@ -21,7 +21,6 @@ colorscheme monokain
 set clipboard+=unnamedplus
 " " Copy to clipboard
 "
-set foldmethod=indent
 vnoremap  <leader>y  "+y
 nnoremap <leader>p "+p
 nnoremap  <leader>Y  "+yg_
