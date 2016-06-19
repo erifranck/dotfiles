@@ -84,8 +84,8 @@ map <S-E> <Plug>CamelCaseMotion_e
 nnoremap <F7> :set invpaste paste?<CR>
 set pastetoggle=<F7>
 
-nmap <F2> :tabprevious<cr>
-nmap <F3> :tabnext<cr>
+map <F2> gT
+map <F3> gt
 nmap <F4> :NERDTreeToggle<cr>
 map <F12> :!mkdir
 map <F6> :w <cr>
