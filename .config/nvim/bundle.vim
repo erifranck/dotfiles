@@ -56,7 +56,6 @@ Plug 'tpope/vim-vividchalk'
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plug 'Puppet-Syntax-Highlighting'
 Plug 'isRuslan/vim-es6'
-Plug 'ternjs/tern_for_vim'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-markdown'
