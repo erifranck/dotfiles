@@ -37,10 +37,6 @@ if ask "Install symlink for .npmrc?" Y; then
   ln -sf ${dir}/.npmrc ${HOME}/.npmrc
 fi
 
-if ask "Install symlink for .config/termite?" Y; then
-  ln -sfn ${dir}/.config/termite ${HOME}/.config/termite
-fi
-
 if ask "Install symlink for .config/nvim?" Y; then
   ln -sfn ${dir}/.config/nvim ${HOME}/.config/nvim
 fi
@@ -51,18 +47,6 @@ fi
 
 if ask "Install symlink for .tmux.conf?" Y; then
   ln -sf ${dir}/.tmux.conf ${HOME}/.tmux.conf
-fi
-
-if ask "Install symlink for .yaourtrc?" Y; then
-  ln -sf ${dir}/.yaourtrc ${HOME}/.yaourtrc
-fi
-
-if ask "Install symlink for .Xresources?" Y; then
-  ln -sf ${dir}/.Xresources ${HOME}/.Xresources
-fi
-
-if ask "Install symlink for .xinitrc?" Y; then
-  ln -sf ${dir}/.xinitrc ${HOME}/.xinitrc
 fi
 
 if ask "Install symlink for .i3blocks.conf?" Y; then
