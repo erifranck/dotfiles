@@ -13,11 +13,11 @@ function! s:install_plug()
 endfunction
 call s:install_plug()
 
+set fillchars+=stl:\ ,stlnc:\
 let base16colorspace=256
 syntax enable
 " "colorscheme gruvbox
 colorscheme monokain
-
 set clipboard+=unnamedplus
 " " Copy to clipboard
 "

@@ -1,5 +1,6 @@
 Plug 'vitalk/vim-simple-todo'
 Plug 'tpope/vim-eunuch'
+Plug 'Lokaltog/vim-powerline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
