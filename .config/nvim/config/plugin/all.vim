@@ -27,8 +27,6 @@ set fileencoding=utf-8
 ""highlight ColorColumn ctermbg=235
 
 " mappings
-map <F5> gT
-map <F6> gt
 map <F7> :tabnew<CR>
 map <F8> :tabclose<CR>
 map <Leader>n :NERDTreeToggle<CR>
@@ -106,7 +104,16 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-b> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 " vim-easy-tags
 let g:easytags_async = 1
 let g:easytags_suppress_ctags_warning = 1 " temporary fix for broken version detection with universal-ctags
