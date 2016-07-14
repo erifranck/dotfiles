@@ -204,3 +204,8 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+let g:easytags_async = 1
+
+let g:ctrlp_map = ''
+let g:ctrlp_cmd='CtrlP'
+nnoremap <Leader>fu :CtrlPFunky<CR>
