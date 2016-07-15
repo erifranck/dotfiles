@@ -1,5 +1,6 @@
 Plug 'vitalk/vim-simple-todo'
 Plug 'tacahiroy/ctrlp-funky'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'Lokaltog/vim-powerline'
 Plug 'ryanoasis/vim-devicons'
