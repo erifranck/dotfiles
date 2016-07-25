@@ -209,3 +209,9 @@ let g:easytags_async = 1
 let g:ctrlp_map = ''
 let g:ctrlp_cmd='CtrlP'
 nnoremap <Leader>fu :CtrlPFunky<CR>
+
+let g:user_emmet_mode='n'    "only enable normal mode functions.
+let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+let g:user_emmet_mode='a'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,jsx,javascript EmmetInstall
