@@ -157,7 +157,6 @@ let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
 
 let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
 let g:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-to join this conversation on GitHub. Already have an account? Sign in to comment
 let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_error_sign = {
       \ 'text': 'E',
