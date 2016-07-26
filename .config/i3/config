@@ -177,7 +177,8 @@ bindsym $mod+Shift+s exec gnome-screenshot
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 exec_always --no-startup-id xrandr --output HDMI-0 --off --output DVI-I-1 --off --output DVI-I-0 --off --output DVI-I-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-2 --mode 1920x1080 --pos 1920x0 --rotate normal
 exec --no-startup-id spotify
-exec --no-startup-id Franz 
+exec --no-startup-id Franz
+exec_always nm-applet
 
 # Keys
 exec_always xmodmap -e "clear lock" #disable caps lock switch
