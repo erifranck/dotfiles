@@ -171,6 +171,7 @@ bindsym $mod+q exec google-chrome
 bindsym $mod+z exec subl
 bindsym $mod+Shift+q kill
 bindsym Print exec screenshot
+bindsym $mod+Shift+s exec gnome-screenshot
 
 # startup
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
