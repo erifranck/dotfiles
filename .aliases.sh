@@ -62,3 +62,5 @@ alias doff="deactivate"
 #4geek
 alias mgp="cd $HOME/4geeks/mall4g-public && npm start"
 alias mgc="cd $HOME/4geeks/mall4g-webclient && npm start"
+alias dpp="sudo ssh -i $HOME/.ssh/mall4g ubuntu@ec2-54-89-76-127.compute-1.amazonaws.com"
+alias dpc="sudo ssh -i $HOME/.ssh/mall4g ubuntu@ec2-52-90-88-239.compute-1.amazonaws.com"
