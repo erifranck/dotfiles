@@ -63,3 +63,9 @@ Plug 'othree/es.next.syntax.vim'
 Plug 'balderdashy/sails'
 Plug 'nikvdp/ejs-syntax'
 Plug 'briancollins/vim-jst'
+Plug 'tpope/vim-ragtag'
+
+" Php
+Plug 'stanangeloff/php.vim'
+Plug 'shawncplus/phpcomplete.vim'
+Plug '2072/php-indenting-for-vim'
