@@ -49,6 +49,12 @@ Plug 'wellle/targets.vim'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/gv.vim'
 
+" Golang
+" Ruby
+" Python
+" Java
+" C#
+" Crystal
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'nono/jquery.vim'
@@ -69,3 +75,4 @@ Plug 'tpope/vim-ragtag'
 Plug 'stanangeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/php-indenting-for-vim'
+Plug 'evidens/vim-twig'
