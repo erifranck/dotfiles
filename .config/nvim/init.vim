@@ -15,9 +15,17 @@ call s:install_plug()
 
 set fillchars+=stl:\ ,stlnc:\
 let base16colorspace=256
+set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
+let g:airline_theme='kalisi'
+
 syntax enable
 " "colorscheme gruvbox
-colorscheme monokain
+" " colorscheme monokain
+
+colorscheme kalisi
+
 set clipboard+=unnamedplus
 " " Copy to clipboard
 "

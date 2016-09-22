@@ -2,6 +2,7 @@ let mapleader = ","
 " show trailing whitespaces, tabs and unpritable characters
 set list
 set listchars=tab:▸\ ,trail:◃,nbsp:•
+let g:airline_theme='kalisi'
 
 " indentation
 set number
@@ -144,12 +145,23 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
+      \ 'colorscheme': 'landscape',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
 
 " Neomake
@@ -218,3 +230,4 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,jsx,javascript EmmetInstall
+

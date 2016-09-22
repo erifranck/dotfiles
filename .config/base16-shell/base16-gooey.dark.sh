@@ -3,54 +3,50 @@
 # Alex Booker <alexbooker@fastmail.im>
 
 if [ "${TERM%%-*}" = 'linux' ]; then
-    # This script doesn't support linux console (use 'vconsole' template instead)
     return 2>/dev/null || exit 0
 fi
 
-color00="10/12/18/;" # Base 00 - Black
-color01="ee/82/9f" # Base 08 - Red
-color02="a5/ff/e1" # Base 0B - Green
-color03="ff/ef/cc" # Base 0A - Yellow
-color04="97/bb/f7" # Base 0D - Blue
-color05="c0/b7/f9" # Base 0E - Magenta
-color06="97/e0/ff" # Base 0C - Cyan
-color07="d1/d4/e0" # Base 05 - White
-color08="77/80/a1" # Base 03 - Bright Black
+color00="26/32/38" # Base 00 - Black
+color01="EC/5F/67" # Base 08 - Red
+color02="8B/D6/49" # Base 0B - Green
+color03="FF/CC/00" # Base 0A - Yellow
+color04="89/DD/FF" # Base 0D - Blue
+color05="82/AA/FF" # Base 0E - Magenta
+color06="80/CB/C4" # Base 0C - Cyan
+color07="CD/D3/DE" # Base 05 - White
+color08="70/78/80" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="ff/ff/ff" # Base 07 - Bright White
-color16="f9/91/70" # Base 09
-color17="fc/c0/9e" # Base 0F
-color18="1f/22/2d" # Base 01
-color19="25/29/36" # Base 02
-color20="C0/C5/CE" # Base 04
-color21="C9/CC/DB" # Base 06
-color_foreground="d1/d4/e0" # Base 05
-color_background="10/12/18/;" # Base 00
-color_cursor="d1/d4/e0" # Base 05
+color15="FF/FF/FF" # Base 07 - Bright White
+color16="EA/95/60" # Base 09
+color17="EC/5F/67" # Base 0F
+color18="2C/39/3F" # Base 01
+color19="37/47/4F" # Base 02
+color20="C9/CC/D3" # Base 04
+color21="D5/DB/E5" # Base 06
+color_foreground="CD/D3/DE" # Base 05
+color_background="26/32/38" # Base 00
+color_cursor="CD/D3/DE" # Base 05
 
 if [ -n "$TMUX" ]; then
-  # tell tmux to pass the escape sequences through
+  # Tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
-  printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
-  printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
-  printf_template_custom="\033Ptmux;\033\033]%s%s\007\033\\"
+  printf_template='\033Ptmux;\033\033]4;%d;rgb:%s\033\033\\\033\\'
+  printf_template_var='\033Ptmux;\033\033]%d;rgb:%s\033\033\\\033\\'
+  printf_template_custom='\033Ptmux;\033\033]%s%s\033\033\\\033\\'
 elif [ "${TERM%%-*}" = "screen" ]; then
   # GNU screen (screen, screen-256color, screen-256color-bce)
-  printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
-  printf_template_var="\033P\033]%d;rgb:%s\007\033\\"
-  printf_template_custom="\033P\033]%s%s\007\033\\"
-elif [[ $- != *i* ]]; then
-  # non-interactive
-  alias printf=/bin/false
+  printf_template='\033P\033]4;%d;rgb:%s\033\\'
+  printf_template_var='\033P\033]%d;rgb:%s\033\\'
+  printf_template_custom='\033P\033]%s%s\033\\'
 else
-  printf_template="\033]4;%d;rgb:%s\033\\"
-  printf_template_var="\033]%d;rgb:%s\033\\"
-  printf_template_custom="\033]%s%s\033\\"
+  printf_template='\033]4;%d;rgb:%s\033\\'
+  printf_template_var='\033]%d;rgb:%s\033\\'
+  printf_template_custom='\033]%s%s\033\\'
 fi
 
 # 16 color space
@@ -82,13 +78,13 @@ printf $printf_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  printf $printf_template_custom Pg d1d4e0 # forground
-  printf $printf_template_custom Ph 101218; # background
-  printf $printf_template_custom Pi d1d4e0 # bold color
-  printf $printf_template_custom Pj 252936 # selection color
-  printf $printf_template_custom Pk d1d4e0 # selected text color
-  printf $printf_template_custom Pl d1d4e0 # cursor
-  printf $printf_template_custom Pm 101218; # cursor text
+  printf $printf_template_custom Pg CDD3DE # forground
+  printf $printf_template_custom Ph 263238 # background
+  printf $printf_template_custom Pi CDD3DE # bold color
+  printf $printf_template_custom Pj 37474F # selection color
+  printf $printf_template_custom Pk CDD3DE # selected text color
+  printf $printf_template_custom Pl CDD3DE # cursor
+  printf $printf_template_custom Pm 263238 # cursor text
 else
   printf $printf_template_var 10 $color_foreground
   printf $printf_template_var 11 $color_background

@@ -76,3 +76,6 @@ Plug 'stanangeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/php-indenting-for-vim'
 Plug 'evidens/vim-twig'
+" Theme
+Plug 'https://github.com/freeo/vim-kalisi'
+Plug 'chriskempson/base16-vim'
