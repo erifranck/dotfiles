@@ -26,7 +26,8 @@ set fileencoding=utf-8
 " make a mark for column 80
 ""set colorcolumn=80
 ""highlight ColorColumn ctermbg=235
-
+"out file 
+map <Leader>c :q! <CR>
 " mappings
 map <F7> :tabnew<CR>
 map <F8> :tabclose<CR>

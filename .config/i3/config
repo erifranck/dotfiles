@@ -121,16 +121,15 @@
 
 # Workspace Monitors
   workspace $workspace1 output $monitor1
-  workspace $workspace2 output $monitor1
-  workspace $workspace3 output $monitor1
-  workspace $workspace4 output $monitor1
-  workspace $workspace5 output $monitor1
-  workspace $workspace6 output $monitor1
-  workspace $workspace9 output $monitor1
-  workspace $workspace10 output $monitor1
+  workspace $workspace2 output $monitor2
+  workspace $workspace3 output $monitor3
+  workspace $workspace4 output $monitor4
+  workspace $workspace5 output $monitor5
+  workspace $workspace6 output $monitor6
+  workspace $workspace9 output $monitor9
+  workspace $workspace10 output $monitor10
 
 # Program Workspaces
-  assign [class="Firefox"] $workspace1
   assign [class="Spotify"] $workspace10
   assign [class="Franz"] $workspace9
 
