@@ -23,8 +23,9 @@ let g:airline_theme='kalisi'
 syntax enable
 " "colorscheme gruvbox
 " " colorscheme monokain
+"" colorscheme kalisi
 
-colorscheme kalisi
+colorscheme dracula
 
 set clipboard+=unnamedplus
 " " Copy to clipboard

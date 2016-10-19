@@ -146,7 +146,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'landscape',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]

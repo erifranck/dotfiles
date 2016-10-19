@@ -49,6 +49,8 @@ Plug 'wellle/targets.vim'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/gv.vim'
 
+"" theme
+Plug 'dracula/vim'
 " Golang
 " Ruby
 " Python
