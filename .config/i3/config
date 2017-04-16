@@ -43,6 +43,9 @@
   hide_edge_borders both
   new_window none
 
+#change language
+  bindsym $mod+Shift+n exec setxkbmap -option grp:alt_shift_toggle us
+  bindsym $mod+Shift+b exec setxkbmap -option grp:alt_shift_toggle es
 # Window-Related Bindings
   bindsym $mod+h focus left
   bindsym $mod+j focus down
