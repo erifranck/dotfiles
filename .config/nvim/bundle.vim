@@ -72,6 +72,7 @@ Plug 'balderdashy/sails'
 Plug 'nikvdp/ejs-syntax'
 Plug 'briancollins/vim-jst'
 Plug 'tpope/vim-ragtag'
+Plug 'ianks/vim-tsx'
 
 " Php
 Plug 'stanangeloff/php.vim'
