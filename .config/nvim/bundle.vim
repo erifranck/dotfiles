@@ -76,6 +76,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'prettier/vim-prettier'
 Plug 'vim-syntastic/syntastic'
+Plug 'FrigoEU/psc-ide-vim'
+Plug 'ElmCast/elm-vim'
+Plug 'purescript-contrib/purescript-vim'
 " Plug 'sgur/vim-editorconfig'
 
 " Php
