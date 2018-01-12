@@ -1,16 +1,7 @@
 Plug 'vitalk/vim-simple-todo'
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'Lokaltog/vim-powerline'
 Plug 'ryanoasis/vim-devicons'
-Plug 'digitaltoad/vim-jade'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-eunuch'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'carlitux/deoplete-ternjs'
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -32,9 +23,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'kshenoy/vim-signature'
 Plug 'Chiel92/vim-autoformat'
 Plug 'cohama/lexima.vim'
-Plug 'elzr/vim-json'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'derekwyatt/vim-scala'
 Plug 'diepm/vim-rest-console'
 Plug 'mhinz/vim-startify'
 Plug 'benekastah/neomake'
@@ -47,16 +36,22 @@ Plug 'ervandew/supertab'
 Plug 'kassio/neoterm'
 Plug 'wellle/targets.vim'
 Plug 'junegunn/gv.vim'
+Plug 'dracula/vim'
+
+"" scss and statics
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'elzr/vim-json'
 
 "" theme
-Plug 'dracula/vim'
 " Golang
 " Ruby
 " Python
 " Java
 " C#
 " Crystal
+" Scala
 " JavaScript
+Plug 'derekwyatt/vim-scala'
 Plug 'pangloss/vim-javascript'
 Plug 'nono/jquery.vim'
 Plug 'moll/vim-node'
@@ -79,6 +74,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'FrigoEU/psc-ide-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'purescript-contrib/purescript-vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'carlitux/deoplete-ternjs'
+Plug 'posva/vim-vue'
 " Plug 'sgur/vim-editorconfig'
 
 " Php

@@ -71,4 +71,16 @@ mkfile() {
   mkdir -p -- "$1"
   touch -- "$1"/"$2"
 }
+
+androidadb() {
+  adb reverse tcp:8181 tcp:8181
+  adb shell input keyevent 82
+}
+
+runtron() {
+  adb reverse tcp:9090 tcp:9090
+}
+
 alias newfile=mkfile
+alias testandroid=androidadb
+alias runreacttotron=runtron

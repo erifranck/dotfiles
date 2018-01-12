@@ -22,10 +22,10 @@ let g:airline_theme='kalisi'
 
 syntax enable
 " "colorscheme gruvbox
-" " colorscheme monokain
+colorscheme monokain
 "" colorscheme kalisi
 
-colorscheme dracula
+"" "colorscheme dracula
 
 set clipboard+=unnamedplus
 " " Copy to clipboard
@@ -58,7 +58,6 @@ set wrap!
 set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
-
 "beauty
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
 autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
