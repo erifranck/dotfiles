@@ -14,6 +14,7 @@ set fileformat=unix
 set lazyredraw
 set noshowmode
 set ignorecase
+set autoread
 set smartcase
 set gdefault
 
@@ -83,8 +84,10 @@ map <S-E> <Plug>CamelCaseMotion_e
 nnoremap <F7> :set invpaste paste?<CR>
 set pastetoggle=<F7>
 
-map <F2> gT
-map <F3> gt
+map <Leader>> gT
+map <Leader>< gt
+map <F2> gt
+map <F3> gT
 nmap <F4> :NERDTreeToggle<cr>
 map <F12> :!mkdir
 map <F6> :w <cr>
