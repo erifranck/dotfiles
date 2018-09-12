@@ -18,7 +18,8 @@ source ~/.aliases.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 export EDITOR=nvim
 # export FZF_DEFAULT_COMMAND='ag -g ""'
 # export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
@@ -33,6 +34,6 @@ if [ -f /home/user/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 #
-export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_HOME="/Users/mac/Library/Android/sdk"
 export PATH=$PATH:"$ANDROID_HOME/platform-tools":$PATH:"$ANDROID_HOME/tools"
 

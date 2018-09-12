@@ -78,6 +78,8 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'posva/vim-vue'
 " Plug 'sgur/vim-editorconfig'
+"
+Plug 'editorconfig/editorconfig-vim'
 
 " Php
 Plug 'stanangeloff/php.vim'
