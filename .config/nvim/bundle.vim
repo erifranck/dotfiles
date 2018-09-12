@@ -77,6 +77,7 @@ Plug 'purescript-contrib/purescript-vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'posva/vim-vue'
+Plug 'mhartington/nvim-typescript'
 " Plug 'sgur/vim-editorconfig'
 "
 Plug 'editorconfig/editorconfig-vim'
