@@ -50,6 +50,7 @@ Plug 'elzr/vim-json'
 " C#
 " Crystal
 " Scala
+" Haskell
 " JavaScript
 Plug 'derekwyatt/vim-scala'
 Plug 'pangloss/vim-javascript'
@@ -77,6 +78,7 @@ Plug 'purescript-contrib/purescript-vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'posva/vim-vue'
+Plug 'neovimhaskell/haskell-vim'
 Plug 'mhartington/nvim-typescript'
 " Plug 'sgur/vim-editorconfig'
 "
