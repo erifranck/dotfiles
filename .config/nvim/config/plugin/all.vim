@@ -70,10 +70,29 @@ nmap <Leader><Space>, :ll<CR>
 nmap <Leader><Space>n :lnext<CR>
 nmap <Leader><Space>p :lprev<CR>
 
+" ale
+" let g:ale_fixers = {
+" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \   'javascript': ['eslint', 'prettier'],
+" \}
+
+" let g:ale_linters = {
+" \   'javascript': ['eslint'],
+" \}
+
+" let g:ale_linters_explicit = 1
+" let g:ale_sign_column_always = 1
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+" let g:ale_completion_enabled = 1
+
 " CamelCaseMotion
 map <S-W> <Plug>CamelCaseMotion_w
 map <S-B> <Plug>CamelCaseMotion_b
 map <S-E> <Plug>CamelCaseMotion_e
+
+
+
 
 " workaround for ctrl-h not working on nvim
 "if has('nvim')

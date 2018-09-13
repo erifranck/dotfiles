@@ -27,7 +27,12 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'diepm/vim-rest-console'
 Plug 'mhinz/vim-startify'
 Plug 'benekastah/neomake'
-Plug 'Shougo/deoplete.nvim'
+" Plug 'w0rp/ale'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'mhartington/deoplete-typescript', { 'do': 'npm install -g typescript', 'for': 'typescript' }
+Plug 'Shougo/denite.nvim'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'xolox/vim-misc'
@@ -68,8 +73,7 @@ Plug 'nikvdp/ejs-syntax'
 Plug 'briancollins/vim-jst'
 Plug 'tpope/vim-ragtag'
 Plug 'ianks/vim-tsx'
-Plug 'leafgarland/typescript-vim'
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'prettier/vim-prettier'
 Plug 'vim-syntastic/syntastic'
 Plug 'FrigoEU/psc-ide-vim'
@@ -79,9 +83,9 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'posva/vim-vue'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'mhartington/nvim-typescript'
-" Plug 'sgur/vim-editorconfig'
-"
+
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+
 Plug 'editorconfig/editorconfig-vim'
 
 " Php
