@@ -64,27 +64,27 @@ inoremap <LEFT>  <NOP>
 inoremap <RIGHT> <NOP>
 
 " Neomake
-nmap <Leader><Space>o :lopen<CR>
-nmap <Leader><Space>c :lclose<CR>
-nmap <Leader><Space>, :ll<CR>
-nmap <Leader><Space>n :lnext<CR>
-nmap <Leader><Space>p :lprev<CR>
+" nmap <Leader><Space>o :lopen<CR>
+" nmap <Leader><Space>c :lclose<CR>
+" nmap <Leader><Space>, :ll<CR>
+" nmap <Leader><Space>n :lnext<CR>
+" nmap <Leader><Space>p :lprev<CR>
 
-" ale
-" let g:ale_fixers = {
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-" \   'javascript': ['eslint', 'prettier'],
-" \}
+let g:ale_fixers = {
+ \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+ \   'javascript': ['eslint', 'prettier'],
+ \}
 
-" let g:ale_linters = {
-" \   'javascript': ['eslint'],
-" \}
+ let g:ale_linters = {
+ \   'javascript': ['eslint'],
+ \   'typescript': ['tslint'],
+ \}
 
-" let g:ale_linters_explicit = 1
-" let g:ale_sign_column_always = 1
-" let g:ale_sign_error = '>>'
-" let g:ale_sign_warning = '--'
-" let g:ale_completion_enabled = 1
+ let g:ale_linters_explicit = 1
+ let g:ale_sign_column_always = 1
+ let g:ale_sign_error = '>>'
+ let g:ale_sign_warning = '--'
+ let g:ale_completion_enabled = 1
 
 " CamelCaseMotion
 map <S-W> <Plug>CamelCaseMotion_w
@@ -188,24 +188,25 @@ let g:lightline = {
       \ }
 
 " Neomake
-let g:neomake_javascript_enabled_makers = ['eslint', 'tslint']
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_typescript_enabled_makers = ['tslint']
 
-let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
-let s:tslint_path = system('PATH=$(npm bin):$PATH && which tslint')
-let g:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-let g:neomake_python_enabled_makers = ['flake8']
-let g:neomake_error_sign = {
-      \ 'text': 'E',
-      \ 'texthl': 'ErrorMsg',
-      \ }
+" let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
+" let s:tslint_path = system('PATH=$(npm bin):$PATH && which tslint')
+" let g:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+" let g:neomake_python_enabled_makers = ['flake8']
+"let g:neomake_error_sign = {
+"      \ 'text': 'E',
+"      \ 'texthl': 'ErrorMsg',
+"      \ }
 
 hi WarningMsg ctermbg=black ctermfg=3
-let g:neomake_warning_sign = {
-      \ 'text': 'W',
-      \ 'texthl': 'WarningMsg',
-      \ }
+"let g:neomake_warning_sign = {
+"      \ 'text': 'W',
+"      \ 'texthl': 'WarningMsg',
+"      \ }
 
-autocmd! BufWritePost,BufEnter * Neomake
+" autocmd! BufWritePost,BufEnter * Neomake
 
 " save swap files in a temp directory
 set backupdir=~/.tmp,/tmp,/var/tmp
@@ -278,3 +279,18 @@ let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
 
+nm <buffer> <silent> <leader>L :Plist<CR>
+nm <buffer> <silent> <leader>l :Pload!<CR>
+nm <buffer> <silent> <leader>r :Prebuild!<CR>
+nm <buffer> <silent> <leader>f :PaddClause<CR>
+nm <buffer> <silent> <leader>t :PaddType<CR>
+nm <buffer> <silent> <leader>a :Papply<CR>
+nm <buffer> <silent> <leader>A :Papply!<CR>
+nm <buffer> <silent> <leader>C :Pcase!<CR>
+nm <buffer> <silent> <leader>i :Pimport<CR>
+nm <buffer> <silent> <leader>qa :PaddImportQualifications<CR>
+nm <buffer> <silent> <leader>g :Pgoto<CR>
+nm <buffer> <silent> <leader>p :Pursuit<CR>
+nm <buffer> <silent> <leader>T :Ptype<CR>
+
+let g:psc_ide_log_level = 3

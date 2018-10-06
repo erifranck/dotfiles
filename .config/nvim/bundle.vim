@@ -26,8 +26,8 @@ Plug 'cohama/lexima.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'diepm/vim-rest-console'
 Plug 'mhinz/vim-startify'
-Plug 'benekastah/neomake'
-" Plug 'w0rp/ale'
+" Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'mhartington/deoplete-typescript', { 'do': 'npm install -g typescript', 'for': 'typescript' }
