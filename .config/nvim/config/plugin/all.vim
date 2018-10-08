@@ -72,7 +72,13 @@ inoremap <RIGHT> <NOP>
 
 let g:ale_fixers = {
  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
- \   'javascript': ['eslint', 'prettier'],
+ \   'javascript': [
+  \       'DoSomething',
+  \       'eslint',
+  \       'prettier',
+  \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+  \   ],
+ \   'typescript': ['tslint'],
  \}
 
  let g:ale_linters = {
