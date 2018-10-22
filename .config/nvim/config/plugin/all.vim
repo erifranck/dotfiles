@@ -280,7 +280,9 @@ let g:user_emmet_settings = {
 \      'extends' : 'jsx',
 \  },
 \}
-autocmd FileType html,css,jsx,javascript EmmetInstall
+
+let g:used_javascript_libs = 'underscore,backbone,sugar,jasmine,d3,vue,tape,react'
+autocmd FileType html,css,jsx,javascript,typescript EmmetInstall
 
 
 let purescript_indent_if = 3
