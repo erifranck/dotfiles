@@ -70,15 +70,23 @@ inoremap <RIGHT> <NOP>
 " nmap <Leader><Space>n :lnext<CR>
 " nmap <Leader><Space>p :lprev<CR>
 
+  " typescript
+let g:typescript_opfirst='\%([<>=,?^%|*/&]\|\([-:+]\)\1\@!\|!=\|in\%(stanceof\)\=\>\)'
+autocmd FileType typescript :set makeprg=tsc
+
 let g:ale_fixers = {
  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
  \   'javascript': [
   \       'DoSomething',
   \       'eslint',
   \       'prettier',
+ \       'tslint',
   \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
   \   ],
- \   'typescript': ['tslint'],
+ \   'typescript': [
+ \       'tslint',
+  \      {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+ \   ],
  \}
 
  let g:ale_linters = {
@@ -241,6 +249,13 @@ if exists('g:plugs["tern_for_vim"]')
   let g:tern_show_signature_in_pum = 1
   autocmd FileType javascript setlocal omnifunc=tern#Complete
 endif
+
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
+let g:tsuquyomi_completion_detail = 1
 
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 

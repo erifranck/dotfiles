@@ -34,6 +34,7 @@ if [ -f /home/user/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 #
+CASE_SENSITIVE="true"
 export ANDROID_HOME="/Users/mac/Library/Android/sdk"
 export PATH=$PATH:"$ANDROID_HOME/platform-tools":$PATH:"$ANDROID_HOME/tools"
 
