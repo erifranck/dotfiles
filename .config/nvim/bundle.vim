@@ -56,6 +56,7 @@ Plug 'elzr/vim-json'
 " Haskell
 " JavaScript
 " typescript
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'derekwyatt/vim-scala'
 " Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'tsx'], 'do': ':UpdateRemotePlugins' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
