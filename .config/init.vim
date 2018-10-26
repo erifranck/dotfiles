@@ -640,6 +640,10 @@ call plug#begin('~/.config/nvim/plugged')
 " Language-Specific Configuration {{{
     " html / templates {{{
         " emmet support for vim - easily create markdup wth CSS-like syntax
+		let g:user_emmet_mode='n'    "only enable normal mode functions.
+		let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+		let g:user_emmet_mode='a'
+		let g:user_emmet_install_global = 0
         Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript.jsx']}
         let g:user_emmet_settings = {
         \  'javascript.jsx': {
