@@ -647,6 +647,10 @@ call plug#begin('~/.config/nvim/plugged')
         \  },
         \}
 
+        let g:user_emmet_mode='n'    "only enable normal mode functions.
+        let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+        let g:user_emmet_mode='a'
+        let g:user_emmet_install_global = 0
         " match tags in html, similar to paren support
         Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
@@ -951,18 +955,7 @@ let g:ctrlp_map = ''
 let g:ctrlp_cmd='CtrlP'
 nnoremap <Leader>fu :CtrlPFunky<CR>
 
-let g:user_emmet_mode='n'    "only enable normal mode functions.
-let g:user_emmet_mode='inv'  "enable all functions, which is equal to
-let g:user_emmet_mode='a'
-let g:user_emmet_install_global = 0
-let g:user_emmet_settings = {
-\  'javascript' : {
-\      'extends' : 'jsx',
-\  },
-\}
-
 let g:used_javascript_libs = 'underscore,backbone,sugar,jasmine,d3,vue,tape,react'
-autocmd FileType html,css,jsx,javascript,typescript EmmetInstall
 
 
 let purescript_indent_if = 3
