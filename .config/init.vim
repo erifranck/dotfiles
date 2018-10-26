@@ -738,7 +738,8 @@ call plug#end()
     " highlight Type cterm=italic term=italic gui=italic
     highlight Normal ctermbg=none
 
+	let g:user_emmet_install_global = 0
+	autocmd FileType html,css EmmetInstall
 " }}}
 
 " vim:set foldmethod=marker foldlevel=0
-
