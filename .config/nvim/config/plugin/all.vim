@@ -71,34 +71,6 @@ inoremap <RIGHT> <NOP>
 " nmap <Leader><Space>p :lprev<CR>
 
   " typescript
-let g:typescript_opfirst='\%([<>=,?^%|*/&]\|\([-:+]\)\1\@!\|!=\|in\%(stanceof\)\=\>\)'
-autocmd FileType typescript :set makeprg=tsc
-
-let g:ale_fixers = {
- \   '*': ['remove_trailing_lines', 'trim_whitespace'],
- \   'javascript': [
-  \       'DoSomething',
-  \       'eslint',
-  \       'prettier',
- \       'tslint',
-  \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
-  \   ],
- \   'typescript': [
- \       'tslint',
-  \      {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
- \   ],
- \}
-
- let g:ale_linters = {
- \   'javascript': ['eslint'],
- \   'typescript': ['tslint'],
- \}
-
- let g:ale_linters_explicit = 1
- let g:ale_sign_column_always = 1
- let g:ale_sign_error = '>>'
- let g:ale_sign_warning = '--'
- let g:ale_completion_enabled = 1
 
 " CamelCaseMotion
 map <S-W> <Plug>CamelCaseMotion_w
@@ -317,3 +289,51 @@ nm <buffer> <silent> <leader>p :Pursuit<CR>
 nm <buffer> <silent> <leader>T :Ptype<CR>
 
 let g:psc_ide_log_level = 3
+
+let g:typescript_opfirst='\%([<>=,?^%|*/&]\|\([-:+]\)\1\@!\|!=\|in\%(stanceof\)\=\>\)'
+autocmd FileType typescript :set makeprg=tsc
+
+let g:ale_javascript_eslint_use_global = 1
+""" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+let g:ale_fixers = {
+ \   'javascript': [
+  \       'eslint', 'standard'
+  \   ],
+ \   'typescript': [
+ \       'tslint'
+ \   ],
+ \}
+
+ let g:ale_linters = {
+ \   'javascript': ['eslint', 'standard'],
+ \   'typescript': ['tslint'],
+ \}
+
+let g:ale_linters_explicit = 1
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:ale_completion_enabled = 1
+let g:ale_echo_cursor = 1
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_format = '%s'
+let g:ale_echo_msg_warning_str = 'Warning'
+let g:ale_enabled = 1
+let g:ale_keep_list_window_open = 0
+let g:ale_lint_delay = 200
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_text_changed = 1
+let g:ale_linter_aliases = {}
+let g:ale_linters = {}
+let g:ale_open_list = 0
+let g:ale_set_highlights = 1
+let g:ale_set_loclist = 1
+let g:ale_set_quickfix = 0
+let g:ale_set_signs = 1
+let g:ale_sign_column_always = 0
+let g:ale_sign_error = '>>'
+let g:ale_sign_offset = 1000000
+let g:ale_sign_warning = '--'
+let g:ale_statusline_format = ['%d error(s)', '%d warning(s)', 'OK']
+let g:ale_warn_about_trailing_whitespace = 1
