@@ -52,6 +52,7 @@ call plug#begin('~/.config/nvim/plugged')
     set tm=500
 " }}}
 
+  Plug 'Chiel92/vim-autoformat'
 " Appearance {{{
     set number " show line numbers
     set wrap " turn on line wrapping
