@@ -484,8 +484,8 @@ call plug#begin('~/.config/nvim/plugged')
         let g:WebDevIconsUnicodeDecorateFolderNodes = 1
         let g:DevIconsEnableFoldersOpenClose = 1
         let g:DevIconsEnableFolderExtensionPatternMatching = 1
-        let NERDTreeDirArrowExpandable = "\u00a0" " make arrows invisible
-        let NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
+        " let NERDTreeDirArrowExpandable = "\u00a0" " make arrows invisible
+        " let NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
 
         augroup nerdtree
             autocmd!
@@ -507,8 +507,8 @@ call plug#begin('~/.config/nvim/plugged')
         nmap <silent> <leader>y :NERDTreeFind<cr>
 
         let NERDTreeShowHidden=1
-        " let NERDTreeDirArrowExpandable = '▷'
-        " let NERDTreeDirArrowCollapsible = '▼'
+        let NERDTreeDirArrowExpandable = '▷'
+        let NERDTreeDirArrowCollapsible = '▼'
         let g:NERDTreeIndicatorMapCustom = {
         \ "Modified"  : "✹",
         \ "Staged"    : "✚",
