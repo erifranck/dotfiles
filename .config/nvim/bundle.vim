@@ -94,4 +94,5 @@ Plug '2072/php-indenting-for-vim'
 Plug 'evidens/vim-twig'
 " Theme
 Plug 'https://github.com/freeo/vim-kalisi'
+Plug 'https://github.com/kiteco/vim-plugin.git'
 Plug 'chriskempson/base16-vim'
